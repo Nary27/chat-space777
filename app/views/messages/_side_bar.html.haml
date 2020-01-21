@@ -1,0 +1,17 @@
+.side_bar
+  .side_bar__username
+    .side_bar__username--namebox
+      .side_bar__username--namebox---nametext
+        name
+      .side_bar__username--namebox---icon
+        = link_to "#", class: "side_bar__btn" do
+          = icon('fas', 'pencil-alt')
+          -# %i.fas.fa-pen-nib
+        = link_to "#", class: "side_bar__btn" do
+          =icon('fas', 'wrench')
+  .side_bar__group_list
+    .side_bar__group_list--box
+      .side_bar__group_list--box---name
+        techcamp
+      .side_bar__group_list--box---message
+        no message

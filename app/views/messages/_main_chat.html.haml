@@ -1,0 +1,32 @@
+.main_chat
+  .main_chat__group_list
+    .main_chat__group_list--channel
+      channel
+      .main_chat__group_list--channel---name  
+        member:name
+    .main_chat__group_list--editbox
+      .main_chat__group_list--editbox---btn 
+        %a{edit_btn:'#'} 
+          edit
+  .main_chat__message_list
+    .main_chat__message_list--box
+      .main_chat__message_list--box---name
+        aaa
+      .main_chat__message_list--box---date
+        aaa
+    .main_chat__message_list--message
+      message
+  .main_chat__message_form
+
+    .main_chat__message_form--type
+      
+      .main_chat__message_form--type---message
+        %input{class:"input--text",type:"message",placeholder:"Write your message"}
+        
+      .main_chat__message_form--type---image
+        %label{class: "input--image"}
+        = icon('fas', 'image')
+        %input{type: "file", class:"input--file"}
+    .main_chat__message_form--send
+      send
+      
