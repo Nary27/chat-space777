@@ -13,6 +13,8 @@ module ChatSpace
       g.javascripts false
       g.helper false
       g.test_framework false
+      # I18n.enforce_available_locales = true
+      config.i18n.default_locale = :ja
     end
   end
 end
