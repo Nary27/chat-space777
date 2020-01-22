@@ -1,17 +1,27 @@
 .side_bar
   .side_bar__username
+    -# = current_user.name
     .side_bar__username--namebox
       .side_bar__username--namebox---nametext
-        name
+        = current_user.name
       .side_bar__username--namebox---icon
-        = link_to "#", class: "side_bar__btn" do
+        = link_to new_group_path, class: "side_bar__btn" do
           = icon('fas', 'pencil-alt')
           -# %i.fas.fa-pen-nib
-        = link_to "#", class: "side_bar__btn" do
+        = link_to edit_user_path(current_user), class: "side_bar__btn" do
           =icon('fas', 'wrench')
   .side_bar__group_list
-    .side_bar__group_list--box
-      .side_bar__group_list--box---name
-        techcamp
-      .side_bar__group_list--box---message
-        no message
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
+    -# .side_bar__group_list--box
+    -#   .side_bar__group_list--box---name
+    -#     techcamp
+    -#   .side_bar__group_list--box---message
+    -#     no message
+    

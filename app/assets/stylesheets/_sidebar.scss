@@ -45,16 +45,18 @@
     background-color: #2f3e51;
     padding: 20px 20px 0px;
 
-    &--box{
+    .group{
       height:65px;
       margin: 0px 0px 40px;
       color: white;
-      &---name{
+      &__name{
         margin: 0px 0px 5px;
         font-size: 15px;
+        color: white;
       }
-      &---message{
+      &__message{
         font-size: 11px;
+        color: white;
       }
 
     }
