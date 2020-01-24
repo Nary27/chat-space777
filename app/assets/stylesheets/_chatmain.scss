@@ -19,6 +19,8 @@
         padding-top: 15px;
         color: #999999;
         font-size: 12px;
+        display: flex;
+        
       }
     }
     &--editbox{
@@ -75,64 +77,63 @@
     height: 90px;
     bottom: 0;
     padding: 10px 40px;
-    display: flex;
     align-items: center;
-   
-
-    &--type{
-      margin: 0px 10px;
-      background-color: white;
-      height: 50px;
+    
+    .new_message{
       display: flex;
-      align-items: center;
-      width: 463px;
-      justify-content: flex-start;
-      position: relative;
-      width: 100%;
 
-      &---message{
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        float: left;
+      &--type{
+        margin: 0px 10px;
+        background-color: white;
+        height: 50px;
         display: flex;
-        padding-right: 60px;
-        padding-left: 10px;
-      }
+        align-items: center;
+        width: 463px;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
 
-      &---image{
-        position: absolute;
-        right: 20px;
-        top: 0px;
-        bottom: 0px;
+        &---message{
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          float: left;
+          display: flex;
+          padding-right: 60px;
+          padding-left: 10px;
+          .input--text{
+            width: 100%;
+            border-style: none;
+          }
+        }
+
+        &---image{
+          position: absolute;
+          right: 20px;
+          top: 0px;
+          bottom: 0px;
+          align-items: center;
+          display: flex;
+          border-style: none;
+          .input--file{
+            display: none;
+          }
+        }
+      } 
+
+      &--send{
+        padding-left: 15px;
+        background-color: #38aef0;
+        color: #fafafa;
+        height: 50px;
+        padding:0px 30px;
         align-items: center;
         display: flex;
-        border-style: none;
       }
-    } 
-      
-
-
-    &--send{
-      padding-left: 15px;
-      background-color: #38aef0;
-      color: #fafafa;
-      height: 50px;
-      padding:0px 30px;
-      align-items: center;
-      display: flex;
-
     }
   }
+  
 }
 
-.input--file{
-  display: none;
-}
-
-.input--text{
-  width: 100%;
-  border-style: none;
-}
