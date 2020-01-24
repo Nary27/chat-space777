@@ -1,32 +1,29 @@
+
 .main_chat
   .main_chat__group_list
     .main_chat__group_list--channel
-      channel
+      = @group.name
       .main_chat__group_list--channel---name  
-        member:name
+        #text member:
+        - @group.group_users.each do|group_user|
+          =group_user.user.name
     .main_chat__group_list--editbox
       .main_chat__group_list--editbox---btn 
-        %a{edit_btn:'#'} 
-          edit
+        = link_to edit_group_path(@group) do
+          Edit
   .main_chat__message_list
-    .main_chat__message_list--box
-      .main_chat__message_list--box---name
-        aaa
-      .main_chat__message_list--box---date
-        aaa
-    .main_chat__message_list--message
-      message
+    = render @messages
   .main_chat__message_form
-
-    .main_chat__message_form--type
-      
-      .main_chat__message_form--type---message
-        %input{class:"input--text",type:"message",placeholder:"Write your message"}
+    = form_for [@group, @message] do |f|
+      .new_message--type
         
-      .main_chat__message_form--type---image
-        %label{class: "input--image"}
-        = icon('fas', 'image')
-        %input{type: "file", class:"input--file"}
-    .main_chat__message_form--send
-      send
+        .new_message--type---message
+          = f.text_field :content, class:"input--text",placeholder:"Write your message"
+          
+        .new_message--type---image
+          = f.label :image,class: "input--image" do
+            = icon('fas', 'image')
+            = f.file_field :image, class:"input--file"
+      .new_message--send
+        = f.submit 'Send', class: 'form--send'
       
