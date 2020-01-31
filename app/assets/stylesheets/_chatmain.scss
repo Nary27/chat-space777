@@ -132,6 +132,11 @@
         padding:0px 30px;
         align-items: center;
         display: flex;
+        .form--send{
+          background-color: #38aef0;
+          color: #fafafa;
+          border: none;
+        }
       }
     }
   }
