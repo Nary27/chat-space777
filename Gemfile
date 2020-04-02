@@ -47,6 +47,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -73,9 +74,7 @@ gem 'mini_magick'
 gem 'pry-rails'
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'pg'
 end
 
 gem 'fog-aws'
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
